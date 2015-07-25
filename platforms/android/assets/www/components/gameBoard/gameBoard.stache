@@ -1,0 +1,49 @@
+<div class='board'>
+<h1><img src='images/bulls.png'/> &amp; <img src='images/cows.png'/></h1>
+
+	<hr>
+	Your guess:
+	<!--TODO: set value with can-value; removes need for .val() checks -->
+	<input id='guess1' maxlength=1 class='guessInput' type='text' autocapitalize="off"/>
+	<input id='guess2' maxlength=1 class='guessInput' type='text' autocapitalize="off"/>
+	<input id='guess3' maxlength=1 class='guessInput' type='text' autocapitalize="off"/>
+	<input id='guess4' maxlength=1 class='guessInput' type='text' autocapitalize="off"/>
+	&nbsp;&nbsp;<h2>Your Score: {{score}}</h2>
+	<hr>
+	<div class='table'>
+		<table class='guessTable'>
+			<thead>
+				<th></th>
+				<th>Guess</th>
+				<th>Bulls</th>
+				<th>Cows</th>
+			</thead>
+			<tbody>
+				{{#if guesses.isResolved}}
+					{{#each guesses.value}}
+						<tr>
+							<td>{{@index 1}}</td>
+							<td>{{word}}</td>
+							<td>{{bulls}}</td>
+							<td>{{cows}}</td>
+						</tr>
+					{{/each}}
+				{{/#if}}
+			</tbody>
+		</table>
+	</div>
+	<hr>
+	<h2>&copy; 2015 Blah Blah Games. | All Rights Reserved.<h2><br/><br/>
+</div>
+
+<div class='ad'>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- bnc -->
+	<ins class="adsbygoogle"
+	     style="display:inline-block;width:320px;height:100px"
+	     data-ad-client="ca-pub-6831276331714408"
+	     data-ad-slot="2427972003"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
